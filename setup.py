@@ -27,5 +27,10 @@ setup(
     extras_require={
         "dev": conditional_dependencies["dev"],
         "all": get_all_dependencies()
+    },
+    entry_points={
+        "console_scripts": [
+            "nebula-install = nebula_installer.install:install"
+        ]
     }
 )
