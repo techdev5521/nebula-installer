@@ -16,7 +16,8 @@ Once created, check that permission will allow you to read, write and execute fr
 
 **Install the Nebula Installer**
 ```bash
-pip install git+git@bitbucket.org:allogy/nebula-installer.git
+# This project is currently hosted on Justin's personal GitHub because Allogy cannot make public repos.
+pip install git+https://github.com/techdev5521/nebula-installer.git
 ```
 
 **Run the Install Command in the Install Directory**
