@@ -22,7 +22,8 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires = [
-
+        "requests",
+        "wget"
     ],
     extras_require={
         "dev": conditional_dependencies["dev"],
