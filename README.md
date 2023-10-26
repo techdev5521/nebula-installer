@@ -6,22 +6,31 @@ A simple installer for the [Nebula](https://github.com/slackhq/nebula) mesh netw
 - Python venv
 
 ## Usage
-**Make a directory**
+**Make a Directory**<br />
 Make a directory where you want Nebula to be installed. Some suggestions are:
 
 - **Linux/macOS**: `/opt/nebula`
 - **Windows**: `C:\Program Files\Nebula`
 
-Once created, make sure that appropriate permissions are applied to the folder. Optionally, add the folder to your system's path.
+Once created, check that permission will allow you to read, write and execute from in that directoy. 
 
 **Install the Nebula Installer**
 ```bash
 pip install git+git@bitbucket.org:allogy/nebula-installer.git
 ```
 
-**Run the install command**
+**Run the Install Command in the Install Directory**
 ```bash
+cd /opt/nebula
 install-nebula
+```
+
+After successful installation, you will have the two Nebula binaries in the install directory:
+
+```bash
+$ ls
+nebula
+nebula-cert
 ```
 
 ## Development
