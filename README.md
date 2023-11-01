@@ -23,7 +23,7 @@ pip install git+https://github.com/techdev5521/nebula-installer.git
 **Run the Install Command in the Install Directory**
 ```bash
 cd /opt/nebula
-install-nebula
+python -m nebula_installer
 ```
 
 After successful installation, you will have the two Nebula binaries in the install directory:

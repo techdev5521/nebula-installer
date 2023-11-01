@@ -79,20 +79,20 @@ def extract_archive(path_to_archive: str, install_path: str) -> None:
             archive.extractall(install_path)
 
 
-def install() -> None:
-    # Set install directory to current directory
-    install_dir = Path(os.curdir).absolute()
 
-    # Get the name of the file to download
-    asset_name = get_github_asset_name()
+# Set install directory to current directory
+install_dir = Path(os.curdir).absolute()
 
-    # Get the download URL for the file
-    download_url = get_download_url(asset_name)
+# Get the name of the file to download
+asset_name = get_github_asset_name()
 
-    # Download the archive to a temporary directory
-    with tempfile.TemporaryDirectory() as temp_dir:
-        print(f"Downloading {asset_name} from {download_url}")
-        nebula_archive = wget.download(url=download_url, out=temp_dir)
-        print() # Print an empty line because wget does not have a newline.
-        extract_archive(nebula_archive, install_dir)
-        print(f"Installed Nebula binaries at {install_dir}")
+# Get the download URL for the file
+download_url = get_download_url(asset_name)
+
+# Download the archive to a temporary directory
+with tempfile.TemporaryDirectory() as temp_dir:
+    print(f"Downloading {asset_name} from {download_url}")
+    nebula_archive = wget.download(url=download_url, out=temp_dir)
+    print() # Print an empty line because wget does not have a newline.
+    extract_archive(nebula_archive, install_dir)
+    print(f"Installed Nebula binaries at {install_dir}")
